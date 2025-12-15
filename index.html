@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日英语阅读</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Noto+Sans+SC:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #faf9f7;
+            --text: #2c2c2c;
+            --text-light: #666;
+            --accent: #c9a87c;
+            --border: #e8e6e3;
+            --card-bg: #fff;
+            --shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            background: var(--card-bg);
+        }
+
+        h1 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            color: var(--text);
+        }
+
+        h1 span {
+            color: var(--accent);
+        }
+
+        .subtitle {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav button {
+            padding: 0.5rem 1.2rem;
+            border: 1px solid var(--border);
+            background: transparent;
+            border-radius: 2rem;
+            cursor: pointer;
+            font-size: 0.85rem;
+            color: var(--text);
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        nav button:hover,
+        nav button.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .article-date {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .article-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+
+        .toggle-controls {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .toggle-btn {
+            padding: 0.3rem 0.8rem;
+            border: 1px solid var(--border);
+            background: transparent;
+            border-radius: 1rem;
+            cursor: pointer;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+
+        .toggle-btn.active {
+            background: var(--text);
+            border-color: var(--text);
+            color: #fff;
+        }
+
+        .english-content {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.2rem;
+            line-height: 2;
+            margin-bottom: 2rem;
+            color: var(--text);
+        }
+
+        .english-content p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .chinese-content {
+            padding: 1.5rem;
+            background: #f8f7f5;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 3px solid var(--accent);
+        }
+
+        .chinese-content h3 {
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .chinese-content p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 0.8rem;
+        }
+
+        .vocabulary {
+            margin-top: 2rem;
+        }
+
+        .vocabulary h3 {
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-weight: 500;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .vocab-item {
+            display: flex;
+            padding: 0.8rem 0;
+            border-bottom: 1px dashed var(--border);
+            align-items: flex-start;
+        }
+
+        .vocab-word {
+            font-family: 'Crimson Pro', serif;
+            font-weight: 600;
+            min-width: 120px;
+            color: var(--text);
+        }
+
+        .vocab-phonetic {
+            color: var(--accent);
+            font-size: 0.85rem;
+            margin-right: 1rem;
+            min-width: 100px;
+        }
+
+        .vocab-meaning {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .archive-list {
+            display: none;
+        }
+
+        .archive-list.show {
+            display: block;
+        }
+
+        .archive-item {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 0.8rem;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .archive-item:hover {
+            transform: translateX(5px);
+            border-left: 3px solid var(--accent);
+        }
+
+        .archive-item-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.1rem;
+        }
+
+        .archive-item-date {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-light);
+        }
+
+        .loading::after {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .error {
+            text-align: center;
+            padding: 3rem;
+            color: #c0392b;
+            background: #fdf2f2;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-light);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 600px) {
+            .article-card {
+                padding: 1.5rem;
+            }
+
+            .english-content {
+                font-size: 1.1rem;
+            }
+
+            .vocab-item {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+
+            .vocab-phonetic {
+                margin-right: 0;
+            }
+
+            .article-meta {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Daily <span>English</span> Reading</h1>
+        <p class="subtitle">每日一篇，积少成多</p>
+    </header>
+
+    <nav>
+        <button class="active" id="btnToday" onclick="showToday()">今日阅读</button>
+        <button id="btnArchive" onclick="showArchive()">历史文章</button>
+    </nav>
+
+    <main>
+        <div id="todayView">
+            <div class="article-card" id="articleCard">
+                <div class="loading">加载中</div>
+            </div>
+        </div>
+
+        <div class="archive-list" id="archiveView"></div>
+    </main>
+
+    <footer>
+        <p>坚持阅读，遇见更好的自己 ✨</p>
+    </footer>
+
+    <script>
+        // State
+        let articles = [];
+        let articlesData = {};
+        let showChinese = true;
+        let showVocab = true;
+
+        // Load article index
+        async function loadIndex() {
+            try {
+                const response = await fetch('./articles/index.json');
+                if (!response.ok) throw new Error('Failed to load index');
+                articles = await response.json();
+                return articles;
+            } catch (error) {
+                console.error('Error loading index:', error);
+                throw error;
+            }
+        }
+
+        // Load single article
+        async function loadArticle(date) {
+            if (articlesData[date]) {
+                return articlesData[date];
+            }
+            try {
+                const response = await fetch(`./articles/${date}.json`);
+                if (!response.ok) throw new Error('Failed to load article');
+                const data = await response.json();
+                articlesData[date] = data;
+                return data;
+            } catch (error) {
+                console.error('Error loading article:', error);
+                throw error;
+            }
+        }
+
+        // Render article
+        function renderArticle(article) {
+            const card = document.getElementById('articleCard');
+            const englishHtml = article.english.map(p => `<p>${p}</p>`).join('');
+            const chineseHtml = article.chinese.map(p => `<p>${p}</p>`).join('');
+            const vocabHtml = article.vocabulary.map(v => `
+                <div class="vocab-item">
+                    <span class="vocab-word">${v.word}</span>
+                    <span class="vocab-phonetic">${v.phonetic}</span>
+                    <span class="vocab-meaning">${v.meaning}</span>
+                </div>
+            `).join('');
+
+            card.innerHTML = `
+                <div class="article-meta">
+                    <span class="article-date">📅 ${article.date}</span>
+                    <div class="toggle-controls">
+                        <button class="toggle-btn ${showChinese ? 'active' : ''}" onclick="toggleChinese()">
+                            中文翻译
+                        </button>
+                        <button class="toggle-btn ${showVocab ? 'active' : ''}" onclick="toggleVocab()">
+                            词汇解释
+                        </button>
+                    </div>
+                </div>
+                <h2 class="article-title">${article.title}</h2>
+                <div class="english-content">${englishHtml}</div>
+                <div class="chinese-content ${showChinese ? '' : 'hidden'}" id="chineseContent">
+                    <h3>📖 中文翻译</h3>
+                    ${chineseHtml}
+                </div>
+                <div class="vocabulary ${showVocab ? '' : 'hidden'}" id="vocabContent">
+                    <h3>📝 重点词汇</h3>
+                    ${vocabHtml}
+                </div>
+            `;
+        }
+
+        // Render archive
+        async function renderArchive() {
+            const archive = document.getElementById('archiveView');
+            archive.innerHTML = '<div class="loading">加载中</div>';
+
+            try {
+                const items = await Promise.all(
+                    articles.map(async date => {
+                        const article = await loadArticle(date);
+                        return `
+                            <div class="archive-item" onclick="viewArticle('${date}')">
+                                <span class="archive-item-title">${article.title}</span>
+                                <span class="archive-item-date">${article.date}</span>
+                            </div>
+                        `;
+                    })
+                );
+                archive.innerHTML = items.join('');
+            } catch (error) {
+                archive.innerHTML = '<div class="error">加载失败，请刷新重试</div>';
+            }
+        }
+
+        // Toggle functions
+        function toggleChinese() {
+            showChinese = !showChinese;
+            const content = document.getElementById('chineseContent');
+            if (content) {
+                content.classList.toggle('hidden');
+            }
+            document.querySelectorAll('.toggle-btn')[0].classList.toggle('active');
+        }
+
+        function toggleVocab() {
+            showVocab = !showVocab;
+            const content = document.getElementById('vocabContent');
+            if (content) {
+                content.classList.toggle('hidden');
+            }
+            document.querySelectorAll('.toggle-btn')[1].classList.toggle('active');
+        }
+
+        // View switching
+        function showToday() {
+            document.getElementById('todayView').style.display = 'block';
+            document.getElementById('archiveView').classList.remove('show');
+            document.getElementById('btnToday').classList.add('active');
+            document.getElementById('btnArchive').classList.remove('active');
+        }
+
+        function showArchive() {
+            document.getElementById('todayView').style.display = 'none';
+            document.getElementById('archiveView').classList.add('show');
+            document.getElementById('btnToday').classList.remove('active');
+            document.getElementById('btnArchive').classList.add('active');
+            renderArchive();
+        }
+
+        async function viewArticle(date) {
+            showToday();
+            document.getElementById('articleCard').innerHTML = '<div class="loading">加载中</div>';
+            try {
+                const article = await loadArticle(date);
+                renderArticle(article);
+            } catch (error) {
+                document.getElementById('articleCard').innerHTML = '<div class="error">加载失败，请刷新重试</div>';
+            }
+        }
+
+        // Initialize
+        async function init() {
+            try {
+                await loadIndex();
+                if (articles.length > 0) {
+                    const latestArticle = await loadArticle(articles[0]);
+                    renderArticle(latestArticle);
+                } else {
+                    document.getElementById('articleCard').innerHTML = '<div class="error">暂无文章</div>';
+                }
+            } catch (error) {
+                document.getElementById('articleCard').innerHTML = '<div class="error">加载失败，请刷新重试</div>';
+            }
+        }
+
+        init();
+    </script>
+</body>
+
+</html>

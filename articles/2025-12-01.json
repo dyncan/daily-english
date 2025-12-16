@@ -1,0 +1,48 @@
+{
+    "date": "2025-12-01",
+    "title": "The Art of Learning New Skills",
+    "english": [
+        "In today's fast-paced world, the ability to learn new skills is more important than ever. Whether it's coding, a new language, or playing an instrument, continuous learning keeps your mind sharp and opens up new opportunities.",
+        "A common mistake is trying to learn too much too quickly. Instead, focus on **deliberate practice**, which means concentrating on your weaknesses and getting immediate feedback. Break the skill down into small, manageable steps.",
+        "Consistency is crucial. Even spending just 30 minutes a day on a new skill is far better than a five-hour session once a month. Make learning a regular part of your schedule, and remember to celebrate small victories along the way.",
+        "Don't be afraid to make mistakes; they are an essential part of the learning process. Embrace challenges, stay curious, and you will be surprised at how much you can achieve over time."
+    ],
+    "chinese": [
+        "在当今快节奏的世界里，学习新技能的能力比以往任何时候都更加重要。无论是编程、一门新语言，还是演奏乐器，持续学习都能让你的思维保持敏锐，并开启新的机会。",
+        "一个常见的错误是试图在短时间内学得太多。相反，要专注于**刻意练习**，这意味着集中精力解决你的弱点并获得即时反馈。将技能分解成小的、可管理的步骤。",
+        "坚持不懈至关重要。即使每天只花 30 分钟学习一项新技能，也比每月进行一次五小时的训练要好得多。让学习成为你日程安排中常规的一部分，并记住要一路庆祝小小的胜利。",
+        "不要害怕犯错；它们是学习过程中不可或缺的一部分。拥抱挑战，保持好奇心，你会被自己随着时间推移能取得的成就感到惊讶。"
+    ],
+    "vocabulary": [
+        {
+            "word": "ability",
+            "phonetic": "/əˈbɪləti/",
+            "meaning": "n. 能力"
+        },
+        {
+            "word": "continuous",
+            "phonetic": "/kənˈtɪnjuəs/",
+            "meaning": "adj. 持续的"
+        },
+        {
+            "word": "deliberate",
+            "phonetic": "/dɪˈlɪbərət/",
+            "meaning": "adj. 故意的，有意的；深思熟虑的"
+        },
+        {
+            "word": "manageable",
+            "phonetic": "/ˈmænɪdʒəbəl/",
+            "meaning": "adj. 可管理的，易处理的"
+        },
+        {
+            "word": "crucial",
+            "phonetic": "/ˈkruːʃl/",
+            "meaning": "adj. 至关重要的"
+        },
+        {
+            "word": "essential",
+            "phonetic": "/ɪˈsenʃl/",
+            "meaning": "adj. 必不可少的，基本的"
+        }
+    ]
+}

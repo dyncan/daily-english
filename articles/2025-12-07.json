@@ -1,0 +1,48 @@
+{
+    "date": "2025-12-07",
+    "title": "The Importance of Quality Sleep (生活)",
+    "english": [
+        "Sleep is not a luxury; it is a fundamental pillar of health, just as important as diet and exercise. Yet, in our busy society, sleep is often the first thing people sacrifice to make more time for work or leisure.",
+        "Lack of sleep affects nearly every aspect of your life. It impairs cognitive function, making it harder to concentrate and solve problems. It also weakens your immune system, making you more susceptible to illness.",
+        "To improve your sleep quality, establish a **consistent sleep schedule**—going to bed and waking up at the same time, even on weekends. Also, make sure your bedroom is dark, cool, and quiet.",
+        "Avoid using electronic devices right before bed, as the blue light can interfere with melatonin production, the hormone that regulates sleep. Prioritizing seven to nine hours of quality sleep can dramatically boost your physical and mental performance."
+    ],
+    "chinese": [
+        "睡眠不是一种奢侈品；它是健康的基本支柱，与饮食和运动同等重要。然而，在我们忙碌的社会中，睡眠往往是人们为了腾出更多时间用于工作或休闲而首先牺牲的东西。",
+        "睡眠不足会影响你生活的几乎所有方面。它会损害认知功能，使人更难集中注意力和解决问题。它还会削弱你的免疫系统，使你更容易受到疾病的感染。",
+        "为了改善你的睡眠质量，请建立一个**固定的睡眠时间表**——即使在周末，也要在同一时间睡觉和起床。此外，确保你的卧室黑暗、凉爽且安静。",
+        "避免在睡前使用电子设备，因为蓝光会干扰褪黑激素（调节睡眠的激素）的产生。优先保证七到九小时的高质量睡眠可以显著提升你的身心表现。"
+    ],
+    "vocabulary": [
+        {
+            "word": "fundamental",
+            "phonetic": "/ˌfʌndəˈmentl/",
+            "meaning": "adj. 基本的，根本的"
+        },
+        {
+            "word": "sacrifice",
+            "phonetic": "/ˈsækrɪfaɪs/",
+            "meaning": "v. 牺牲"
+        },
+        {
+            "word": "impairs",
+            "phonetic": "/ɪmˈpeərz/",
+            "meaning": "v. 损害，削弱"
+        },
+        {
+            "word": "susceptible",
+            "phonetic": "/səˈseptəbl/",
+            "meaning": "adj. 易受影响的"
+        },
+        {
+            "word": "melatonin",
+            "phonetic": "/ˌmeləˈtoʊnɪn/",
+            "meaning": "n. 褪黑激素"
+        },
+        {
+            "word": "prioritizing",
+            "phonetic": "/praɪˈɔːrɪtaɪzɪŋ/",
+            "meaning": "v. 优先考虑"
+        }
+    ]
+}

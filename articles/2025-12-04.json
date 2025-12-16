@@ -1,0 +1,48 @@
+{
+    "date": "2025-12-04",
+    "title": "The Pomodoro Technique for Focus (效率)",
+    "english": [
+        "Many people struggle with maintaining focus, especially when facing large or complex tasks. The **Pomodoro Technique** is a time management method designed to help you stay concentrated and prevent burnout.",
+        "This technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. Each interval is known as a 'Pomodoro,' named after the tomato-shaped kitchen timer used by its creator.",
+        "Here's how it works: First, choose a task. Second, set a 25-minute timer and work on the task intensely until the timer rings. Third, take a short break (5 minutes). After every four Pomodoros, take a longer break (15–30 minutes).",
+        "The short breaks allow your mind to refresh, increasing your mental agility and overall effectiveness. By committing to focused 25-minute sprints, you can significantly boost your output without feeling overwhelmed."
+    ],
+    "chinese": [
+        "许多人在保持注意力方面感到困难，尤其是在面对大型或复杂的任务时。**番茄工作法**是一种时间管理方法，旨在帮助你保持专注并防止倦怠。",
+        "该技术使用计时器将工作分解成若干个时间段，传统上每个时间段为 25 分钟，中间穿插短时休息。每个时间段被称为一个“番茄时间”，因其创造者使用的番茄形状厨房计时器而得名。",
+        "它是这样运作的：首先，选择一项任务。其次，设置 25 分钟的计时器，集中精力工作直到计时器响起。第三，休息片刻（5 分钟）。每完成四个“番茄时间”，就进行一次长休息（15–30 分钟）。",
+        "短时休息能让你的大脑恢复活力，提高你的思维敏捷度和整体效率。通过致力于专注的 25 分钟冲刺，你可以在不感到不知所措的情况下显著提高你的产出。"
+    ],
+    "vocabulary": [
+        {
+            "word": "maintain",
+            "phonetic": "/meɪnˈteɪn/",
+            "meaning": "v. 保持，维持"
+        },
+        {
+            "word": "interval",
+            "phonetic": "/ˈɪntərvəl/",
+            "meaning": "n. 间隔，间歇"
+        },
+        {
+            "word": "intensely",
+            "phonetic": "/ɪnˈtensli/",
+            "meaning": "adv. 强烈地，集中地"
+        },
+        {
+            "word": "agility",
+            "phonetic": "/əˈdʒɪləti/",
+            "meaning": "n. 敏捷性"
+        },
+        {
+            "word": "sprint",
+            "phonetic": "/sprɪnt/",
+            "meaning": "n. 短距离快跑；短时间的冲刺"
+        },
+        {
+            "word": "overwhelmed",
+            "phonetic": "/ˌoʊvərˈwelmd/",
+            "meaning": "adj. 不知所措的，应接不暇的"
+        }
+    ]
+}

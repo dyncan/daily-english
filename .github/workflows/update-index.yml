@@ -3,17 +3,17 @@ name: Update Article Index
 on:
   push:
     paths:
-      - 'articles/*.json'
-      - '!articles/index.json'
+      - "articles/*.json"
+      - "!articles/index.json"
 
 jobs:
   update-index:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
+
       - name: Generate index.json
         run: |
           cd articles
@@ -21,7 +21,7 @@ jobs:
           ls -1 *.json 2>/dev/null | grep -E '^[0-9]{4}-[0-9]{2}-[0-9]{2}\.json$' | sed 's/\.json$//' | sort -r | jq -R -s -c 'split("\n") | map(select(length > 0))' > index.json
           echo "Generated index.json:"
           cat index.json
-      
+
       - name: Commit and push if changed
         run: |
           git config --local user.email "action@github.com"

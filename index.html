@@ -516,13 +516,26 @@
             }
         }
 
+        // Get today's date in YYYY-MM-DD format
+        function getTodayDate() {
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const day = String(today.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        }
+
         // Initialize
         async function init() {
             try {
                 await loadIndex();
                 if (articles.length > 0) {
-                    const latestArticle = await loadArticle(articles[0]);
-                    renderArticle(latestArticle);
+                    const today = getTodayDate();
+                    // 优先显示今天的文章，否则显示最新一篇（日期最大的）
+                    const latestDate = articles.reduce((a, b) => a > b ? a : b);
+                    const targetDate = articles.includes(today) ? today : latestDate;
+                    const article = await loadArticle(targetDate);
+                    renderArticle(article);
                 } else {
                     document.getElementById('articleCard').innerHTML = '<div class="error">暂无文章</div>';
                 }
